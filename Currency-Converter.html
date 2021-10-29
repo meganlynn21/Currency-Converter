@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Megan -->
+<!-- Currency Converter -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Currency Converter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  U.S currency:  <input type= "number" id= "UsCurrency"> 
+  <p>
+ Egyptian Currency: <input type= "text" style= width:150px; id= "EgyptianCurrency"> 
+ <button onClick ="ClickMe()">ClickMe</button>
+  </p>
+    <script src="script.js"> </script>
+<script>
+
+  function ClickMe()
+  { 
+    var UsMoney = document.getElementById("UsCurrency").value;
+    var EgyptMoney = document.getElementById("EgyptianCurrency").value;
+    var UsDollar = (0.064 * EgyptMoney).toFixed(2);
+    var value = (UsMoney * 15.71).toFixed(2);
+    if(UsMoney != "") {
+    document.getElementById("EgyptianCurrency").value=
+    value;
+    }
+    else {
+      document.getElementById("UsCurrency").value=
+      UsDollar;
+    }     
+  }
+   
+</script>
+   
+  </body>
+</html>
+
